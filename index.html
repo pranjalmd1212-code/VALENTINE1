@@ -1,0 +1,156 @@
+<!-- ==========================
+VALENTINE WEBSITE – FINAL VERSION 😈💘
+Files needed in SAME folder:
+index.html, no1.html, no2.html, letter.html, dates.html, gifts.html, heartbreak.html, final.html
+Assets: rohit.jpg, evil-laugh.mp3
+========================== -->
+
+<!-- ================= index.html ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Question for Rohit 💘</title>
+<style>
+body{font-family:Comic Sans MS,cursive;background:linear-gradient(135deg,#ffdde1,#ee9ca7);display:flex;justify-content:center;align-items:center;height:100vh;margin:0;text-align:center}
+.card{background:white;padding:40px;border-radius:25px;box-shadow:0 10px 30px rgba(0,0,0,.2);max-width:420px}
+button{padding:12px 25px;margin:10px;border:none;border-radius:25px;font-size:16px;cursor:pointer}
+.yes{background:#ff4d6d;color:white}
+.no{background:#ccc}
+#timer{font-size:22px;color:#ff4d6d;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Rohit, will you be my Valentine? 💘</h1>
+<p>You have limited time. Choose wisely.</p>
+<div id="timer">10</div>
+<button class="yes" onclick="yesClicked()">Yes 💕</button>
+<button class="no" onclick="location.href='no1.html'">No 🙄</button>
+</div>
+<script>
+let time=10;
+const t=document.getElementById('timer');
+setInterval(()=>{time--;t.innerText=time;if(time<=0)location.href='no1.html'},1000);
+function yesClicked(){confetti();setTimeout(()=>location.href='letter.html',1500)}
+function confetti(){for(let i=0;i<120;i++){let c=document.createElement('div');c.style.position='fixed';c.style.width='10px';c.style.height='10px';c.style.backgroundColor=`hsl(${Math.random()*360},100%,60%)`;c.style.left=Math.random()*100+'vw';c.style.top='-10px';c.style.borderRadius='50%';document.body.appendChild(c');let f=setInterval(()=>{c.style.top=(parseFloat(c.style.top)+6)+'px';if(parseFloat(c.style.top)>innerHeight){clearInterval(f);c.remove()}},20)}}
+</script>
+</body>
+</html>
+
+<!-- ================= no1.html ================= -->
+<!DOCTYPE html>
+<html><head><title>Wrong Answer 😈</title>
+<style>
+body{font-family:Comic Sans MS,cursive;background:black;color:white;display:flex;justify-content:center;align-items:center;height:100vh;text-align:center}
+.box{background:#111;padding:30px;border-radius:20px}
+img{width:150px;border-radius:50%}
+</style></head>
+<body>
+<audio autoplay src="evil-laugh.mp3"></audio>
+<div class="box">
+<img src="rohit.jpg">
+<h1>HAHAHAHA 😈</h1>
+<p>You thought NO was real?</p>
+<button onclick="location.href='no2.html'">Try again 🤡</button>
+</div>
+</body></html>
+
+<!-- ================= no2.html ================= -->
+<!DOCTYPE html>
+<html><head><title>No Deleted ❌</title>
+<style>
+body{font-family:Comic Sans MS,cursive;background:#ffd6e0;display:flex;justify-content:center;align-items:center;height:100vh;text-align:center}
+.box{background:white;padding:30px;border-radius:20px}
+</style></head>
+<body>
+<div class="box">
+<h1>No has been removed 🚫</h1>
+<p>Proceed peacefully.</p>
+<button onclick="location.href='heartbreak.html'">Okay 😐</button>
+</div>
+</body></html>
+
+<!-- ================= heartbreak.html ================= -->
+<!DOCTYPE html>
+<html><head><title>Are you sure? 💔</title>
+<style>
+body{font-family:Comic Sans MS,cursive;background:#000;color:white;display:flex;justify-content:center;align-items:center;height:100vh;text-align:center}
+.box{padding:30px}
+</style></head>
+<body>
+<div class="box">
+<h1>Last chance.</h1>
+<p>If you say no, I will cry, eat ice cream & remember this forever.</p>
+<button onclick="location.href='letter.html'">Fine YES 😭</button>
+</div>
+</body></html>
+
+<!-- ================= letter.html ================= -->
+<!DOCTYPE html>
+<html><head><title>Love Letter 💌</title>
+<style>
+body{font-family:Comic Sans MS,cursive;background:#ffe6f0;display:flex;justify-content:center;align-items:center;height:100vh;text-align:center}
+.box{background:white;padding:35px;border-radius:30px;max-width:450px}
+</style></head>
+<body>
+<div class="box">
+<h1>Dear Rohit 💖</h1>
+<p>You clicked YES and honestly… I knew you would.</p>
+<p>I like you. I choose you. I plan to annoy you forever.</p>
+<p>This Valentine? You’re mine 😌</p>
+<button onclick="location.href='dates.html'">Continue 💕</button>
+</div>
+</body></html>
+
+<!-- ================= dates.html ================= -->
+<!DOCTYPE html>
+<html><head><title>Date Selection 💕</title>
+<style>
+body{font-family:Comic Sans MS,cursive;background:#ffdde1;display:flex;justify-content:center;align-items:center;height:100vh;text-align:center}
+.box{background:white;padding:30px;border-radius:25px}
+button{margin:8px;padding:10px 20px;border-radius:20px;border:none}
+</style></head>
+<body>
+<div class="box">
+<h1>Choose our date 😌</h1>
+<button onclick="location.href='gifts.html'">Movie + Food 🍿</button>
+<button onclick="location.href='gifts.html'">Candle Light Dinner 🕯️</button>
+<button onclick="location.href='gifts.html'">Long Drive + Ice Cream 🚗🍦</button>
+<button onclick="location.href='gifts.html'">Surprise Me 😏</button>
+</div>
+</body></html>
+
+<!-- ================= gifts.html ================= -->
+<!DOCTYPE html>
+<html><head><title>Gift Selection 🎁</title>
+<style>
+body{font-family:Comic Sans MS,cursive;background:#fad0c4;display:flex;justify-content:center;align-items:center;height:100vh;text-align:center}
+.box{background:white;padding:30px;border-radius:25px}
+button{margin:8px;padding:10px 20px;border-radius:20px;border:none}
+</style></head>
+<body>
+<div class="box">
+<h1>Choose my gift 💅</h1>
+<button onclick="location.href='final.html'">Flowers + Chocolate 🌸🍫</button>
+<button onclick="location.href='final.html'">Teddy Bear 🧸</button>
+<button onclick="location.href='final.html'">Jewellery 💍</button>
+<button onclick="location.href='final.html'">All of the above 😌</button>
+</div>
+</body></html>
+
+<!-- ================= final.html ================= -->
+<!DOCTYPE html>
+<html><head><title>Final Verdict 😤</title>
+<style>
+body{font-family:Comic Sans MS,cursive;background:linear-gradient(135deg,#ff9a9e,#fad0c4);display:flex;justify-content:center;align-items:center;height:100vh;text-align:center}
+.box{background:white;padding:40px;border-radius:30px}
+</style></head>
+<body>
+<div class="box">
+<h1>Alright 😤</h1>
+<p>Now gift me all that 💝</p>
+<p>AND take me on that date 😌</p>
+<h2>Be my Valentine, idiot 💘</h2>
+</div>
+</body></html>
